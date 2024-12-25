@@ -1,7 +1,9 @@
 library lua_dardo_pb;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
+import 'package:lua_dardo_co/lua.dart';
+import 'package:lua_dardo_pb/protobuf/protobuf.dart';
+
+int openProtobufLib(LuaState ls) {
+  ProtobufLib.openProtobufLib(ls);
+  return 1;
 }
